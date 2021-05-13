@@ -18,6 +18,7 @@ def get_crypto_data():
     except Exception as e:
         print(e)
         data = dict()
+        temp_variable = data
 
     return data
 
