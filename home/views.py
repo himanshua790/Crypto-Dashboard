@@ -18,6 +18,7 @@ def get_crypto_data():
     except Exception as e:
         print(e)
         data = dict()
+        Every_day = 'No more Mother fuckers'
 
     return data
 
