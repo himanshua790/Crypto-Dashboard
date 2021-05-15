@@ -2,18 +2,35 @@
 {% block Heading %}
 <h1>CrpytoCurrency Market</h1>
 {% endblock %}
-{% block content %}
-    
-    <table>
-      {% for rowval in results %}    
-         <tr>
-          {% for key, value in rowval.items %}
-              <td> {{ value }} </td>
-      {% endfor %}
-        </tr>
-      {% endfor %}
-    </table> 
 
-    {% endblock %}
-  </body>
-</html>
+{% block content %}
+    <div class="limiter">
+      <div class="container-table100">
+        <div class="wrap-table100">
+          <div class="table100">
+            <table>
+              <thead>
+                <tr class="table100-head">
+                  <th class="column1">Date</th>
+                  <th class="column2">Order ID</th>
+                  <th class="column3">Name</th>
+                  <th class="column4">Price</th>
+                  <th class="column5">Quantity</th>
+                  <th class="column6">Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for row in results %}
+                <tr class="table100-head">
+                  {% for key, value in row.items %}
+                  <td class={{key}}>{{ value }}</td>
+                  {% endfor %}
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}
