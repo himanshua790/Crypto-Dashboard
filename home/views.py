@@ -29,4 +29,3 @@ def get_crypto_data():
         data_list.append(data['data'])
     print("this is data list ",data_list)
     return data_list
-##################################################################################################
