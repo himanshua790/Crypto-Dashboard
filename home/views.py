@@ -11,7 +11,7 @@ def home(request):
     print(data)
     return render(request, "index.html", {'results':data})
 
-
+######################################################
 
 # return the data received from api as json object
 def get_crypto_data():
