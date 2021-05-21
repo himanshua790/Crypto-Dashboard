@@ -1,7 +1,9 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.core.mail import send_mail, BadHeaderError
 import requests
 from .models import Api_data
+from .forms import ContactForm
 
 #List of Crypto Required
 all_curr = ['bitcoin',"ethereum","litecoin","cardano","polkadot","dogecoin",'stellar',"chainlink","binance-coin","tether"]
@@ -15,9 +17,30 @@ def home(request):
     print(data)
     return render(request, "index.html", {'results':data})
 
-######################################################
+def contact(request):
+	if request.method == 'POST':
+		form = ContactForm(request.POST)
+		if form.is_valid():
+			subject = "Website Inquiry" 
+			body = {
+			'full_name': form.cleaned_data['full_name'], 
+			'email': form.cleaned_data['email_address'], 
+			'message':form.cleaned_data['message'], 
+			}
+			message = "\n".join(body.values())
 
-# return the data received from api as json object
+			try:
+				send_mail(subject, message, 'admin@example.com', ['admin@example.com']) 
+			except BadHeaderError:
+				return HttpResponse('Invalid header found.')
+			return redirect ("home")
+      
+	form = ContactForm()
+	return render(request, "contact.html", {'form':form})
+
+def about(request):
+    return render(request, "about.html")
+
 def get_crypto_data():
     data_list = []
     for currency in all_curr:
