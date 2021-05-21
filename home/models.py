@@ -1,6 +1,6 @@
-from django.db import models
+from django.db import models as djmodel
 from django.db.models.base import Model
-
+from djongo import models
 # Create your models here.
 class Api_data(models.Model):
     crypto_id = models.CharField(max_length=50)
@@ -15,5 +15,5 @@ class Api_data(models.Model):
     changePercent24Hr = models.CharField(max_length=50)
     vwap24Hr = models.CharField(max_length=50)
     explorer = models.CharField(max_length=50)
-    timestamp =models.CharField(max_length=50)
+
 

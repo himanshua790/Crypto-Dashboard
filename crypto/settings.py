@@ -80,21 +80,72 @@ WSGI_APPLICATION = 'crypto.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+
 '''
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'djongo',
+        'ENFORCE_SCHEMA': False,
+        'NAME': 'crypto_database',
+        'HOST': 'cryptocluster.7g3r7.mongodb.net',
+        'PORT': 27017,
+        'USERNAME': 'crypto',
+        'PASSWORD': 'crypto'
     }
 }
 '''
 
+    
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'crypto',
+        'NAME': 'crypto_database',
+        'CLIENT': {
+           'host': 'mongodb+srv://crypto:crypto@cryptocluster.7g3r7.mongodb.net/crypto',
+        }
+
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'djongo',
+#         'ENFORCE_SCHEMA': False,
+#         'NAME': 'crypto',
+#         'HOST': 'cluster.2dqfi.mongodb.net',
+#         'PORT': 27017,
+#         'USERNAME': 'm001-student',
+#         'PASSWORD': '08031998'
+#     }
+# }
+
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "djongo",
+#         'ENFORCE_SCHEMA': False,
+#         "NAME": "crypto_database",
+#         "CLIENT": {
+#             "host": "cryptocluster.7g3r7.mongodb.net",
+#             "username": "crypto",
+#             "password": "crypto",
+#             "authSource": "admin",
+#         },
+#     }
+# }
+'''mongodb+srv://crypto:crypto@cryptocluster.7g3r7.mongodb.net/crypto
+
+'''
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'djongo',
+#         'NAME': 'djongo-test',
+#         # 'USER': 'user',
+#         # 'PASSWORD': 'passpass',
+#         # 'AUTH_SOURCE': 'djongo-test',
+#         'ENFORCE_SCHEMA': True
+
+#     },
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
