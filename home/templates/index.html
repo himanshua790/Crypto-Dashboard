@@ -28,7 +28,7 @@
               <tbody>
                 {% for row in results %}
                 <tr class="table100-head">
-                  <td class="column1">{{row.id}}</td>
+                  <td class="column1" ><a href= "/currency/{{ row.id }}">{{row.id}}</a></td>
                   <td class="column2">{{row.rank}}</td>
                   <td class="column3">{{row.symbol}}</td>
                   <td class="column4">{{row.name}}</td>
