@@ -1,11 +1,589 @@
-{% extends 'base.html' %}
-{% block Heading %}
+{% extends 'base.html' %} {% block Heading %}
 <h1>CrpytoCurrency Market</h1>
-{% endblock %}
+{% endblock %} {% block content %}
+<h1>{{profile}}</h1>
+<h3>{{data}}</h3>
 
-{% block content %}
-    <h1>
-        {{profile}}
-    </h1>
-    <h3>{{data}}</h3>
+
+<h1>Rank #{{data.rank}}</h1>
+<h1>{{data.name}} Price ({{data.symbol}})</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="sc-16r8icm-0 epyToK container">
+  <div class="sc-16r8icm-0 HBjiE breadcrumbs___1KQgd" display="none,initial">
+    <div class="sc-103s2w8-0 eAmmwa">
+      <a href="/" class="sc-1eb5slv-0 sc-1308828-0 deLPiG cmc-link"
+        >Cryptocurrencies</a
+      ><a href="/coins/" class="sc-1eb5slv-0 sc-1308828-0 deLPiG cmc-link"
+        >Coins</a
+      ><span
+        font-size="2,3"
+        color="text"
+        class="sc-1eb5slv-0 sc-1308828-0 deLPiG"
+        >Bitcoin</span
+      >
+    </div>
+  </div>
+  <div class="sc-16r8icm-0 dOJIkS container___lbFzk">
+    <div class="sc-16r8icm-0 jhEFXj nameSection___3Hk6F">
+      <div class="sc-16r8icm-0 fUBqek nameHeader___27HU_">
+        <img
+          src="https://s2.coinmarketcap.com/static/img/coins/64x64/1.png"
+          height="32"
+          width="32"
+          alt="BTC"
+        />
+        <h2 class="sc-1q9q90x-0 iYFMbU h1___3QSYG" color="text">
+          Bitcoin<small class="nameSymbol___1arQV">BTC</small>
+        </h2>
+        <span class="sc-7f3up6-1 dtMKRz"
+          ><button
+            class="x0o17e-0 eCXbyL sc-7pvt85-0 ccOrkS"
+            style="width: auto; padding: 0px 8px"
+          >
+            <span class="icon-Star"></span></button
+        ></span>
+      </div>
+      <div display="flex" class="sc-16r8icm-0 dmQXYG">
+        <div class="namePill___3p_Ii namePillPrimary___2-GWA">Rank #1</div>
+        <div class="namePill___3p_Ii" style="text-transform: capitalize">
+          Coin
+        </div>
+        <div class="namePill___3p_Ii">On 1,455,920 watchlists</div>
+      </div>
+    </div>
+    <div class="sc-16r8icm-0 dOJIkS priceSection___3kA4m">
+      <h1 class="priceHeading___2GB9O">
+        Bitcoin Price<!-- -->
+        <small>(<!-- -->BTC<!-- -->)</small>
+      </h1>
+      <div class="sc-16r8icm-0 dOJIkS priceTitle___1cXUG">
+        <div class="priceValue___11gHJ">$40,477.17</div>
+        <span
+          style="font-size: 14px; font-weight: 600; padding: 5px 10px"
+          class="sc-1v2ivon-0 fiaaIx"
+          ><span class="icon-Caret-up"></span>1.48<!-- -->%</span
+        >
+      </div>
+      <div class="sc-16r8icm-0 dOJIkS alternatePrices___1M7uY">
+        <p class="sc-10nusm4-0 bspaAT">
+          15.17 ETH<span class="sc-1v2ivon-0 fJLBDK"
+            ><span class="icon-Caret-up"></span>2.03<!-- -->%</span
+          >
+        </p>
+      </div>
+      <div class="sc-16r8icm-0 dOJIkS sliderSection___tjBoJ">
+        <div class="sc-16r8icm-0 gMZGhD nowrap___2C79N">
+          <span class="highLowLabel___2bI-G">Low<!-- -->:</span
+          ><span class="highLowValue___GfyK7">$38,449.52</span>
+        </div>
+        <div class="sc-16r8icm-0 dOJIkS slider___2_uly">
+          <span style="width: 100%" class="sc-1hm9f3g-0 dmzjSD"
+            ><span style="width: 50.5213%"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                height="24px"
+                width="24px"
+                viewBox="0 0 24 24"
+                class="sc-16r8icm-0 fNFbRb sc-1hm9f3g-1 cbEuhW"
+              >
+                <path
+                  d="M18.0566 16H5.94336C5.10459 16 4.68455 14.9782 5.27763 14.3806L11.3343 8.27783C11.7019 7.90739 12.2981 7.90739 12.6657 8.27783L18.7223 14.3806C19.3155 14.9782 18.8954 16 18.0566 16Z"
+                ></path></svg></span
+          ></span>
+        </div>
+        <div class="sc-16r8icm-0 HwsGY nowrap___2C79N">
+          <span class="highLowLabel___2bI-G">High<!-- -->:</span
+          ><span class="highLowValue___GfyK7">$42,462.98</span>
+        </div>
+        <div
+          class="sc-16r8icm-0 juyDgZ namePillBase___AZ1aa"
+          display="inline-block"
+        >
+          24h<svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            height="12"
+            width="12"
+            viewBox="0 0 24 24"
+            style="height: 10px"
+            class="sc-16r8icm-0 kxULrj"
+          >
+            <path
+              d="M6 9L12 15L18 9"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-miterlimit="10"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+        </div>
+      </div>
+      <div class="priceInfoPopup___gpebJ popped___1b3Rx">
+        <span
+          ><img
+            src="https://s2.coinmarketcap.com/static/img/coins/64x64/1.png"
+            height="24"
+            width="24"
+            alt="BTC"
+          />&nbsp;&nbsp;<b>Bitcoin</b>&nbsp;<!-- -->BTC</span
+        ><span
+          ><span class="price"
+            ><span>Price: </span>$40,477.17<!-- -->&nbsp;<span
+              style="
+                background-color: var(--up-color);
+                color: #fff;
+                padding: 3px 10px;
+                border-radius: 8px;
+              "
+              class="qe1dn9-0 RYkpI"
+              ><span class="icon-Caret-up"></span>1.48<!-- -->%</span
+            ></span
+          ><span class="sc-7f3up6-1 dtMKRz"
+            ><button
+              class="x0o17e-0 eCXbyL sc-7pvt85-0 ccOrkS"
+              style="width: auto; padding: 0px 8px"
+            >
+              Add to Main Watchlist &nbsp;<span
+                class="icon-Star"
+              ></span></button></span
+        ></span>
+      </div>
+    </div>
+    <div class="sc-16r8icm-0 dpjhoD statsSection___2aZ29">
+      <div class="hide___2JmAL statsContainer___2uXZW">
+        <div class="statsBlock___11SXA">
+          <div class="statsBlockInner___1abzU">
+            <div class="sc-16r8icm-0 lpaFj statsLabel___1Mkfd">
+              Market Cap
+              <div class="rqf1px-2 ctxRvG" aria-expanded="false">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  height="16"
+                  width="16"
+                  viewBox="0 0 24 24"
+                  color="neutral4"
+                  class="sc-16r8icm-0 lcZGgp"
+                >
+                  <path
+                    d="M12 2C6.48583 2 2 6.48583 2 12C2 17.5142 6.48583 22 12 22C17.5142 22 22 17.5142 22 12C22 6.48583 17.5142 2 12 2ZM14.215 17.2367C13.6642 17.4533 11.755 18.365 10.655 17.3958C10.3267 17.1075 10.1633 16.7417 10.1633 16.2975C10.1633 15.4658 10.4367 14.7408 10.9292 13C11.0158 12.6708 11.1217 12.2442 11.1217 11.9058C11.1217 11.3217 10.9 11.1667 10.2992 11.1667C10.0058 11.1667 9.68083 11.2708 9.38667 11.3808L9.54917 10.715C10.205 10.4483 11.0283 10.1233 11.7333 10.1233C12.7908 10.1233 13.5692 10.6508 13.5692 11.6542C13.5692 11.9433 13.5192 12.45 13.4142 12.8L12.8058 14.9517C12.68 15.3867 12.4525 16.3458 12.805 16.63C13.1517 16.9108 13.9725 16.7617 14.3775 16.5708L14.215 17.2367ZM13.21 8.66667C12.52 8.66667 11.96 8.10667 11.96 7.41667C11.96 6.72667 12.52 6.16667 13.21 6.16667C13.9 6.16667 14.46 6.72667 14.46 7.41667C14.46 8.10667 13.9 8.66667 13.21 8.66667Z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div class="statsItemRight___yJ5i-">
+              <div class="statsValue___2iaoZ">$757,477,665,656</div>
+              <span
+                style="
+                  color: var(--up-color);
+                  padding: 0;
+                  border-radius: 8px;
+                  display: block;
+                  margin-top: 0;
+                  font-size: 12px;
+                  font-weight: 600;
+                "
+                class="qe1dn9-0 RYkpI"
+                ><span class="icon-Caret-up"></span>1.48<!-- -->%</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="statsBlock___11SXA">
+          <div class="statsBlockInner___1abzU">
+            <div class="sc-16r8icm-0 lpaFj statsLabel___1Mkfd">
+              Fully Diluted Market Cap
+              <div class="rqf1px-2 ctxRvG" aria-expanded="false">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  height="16"
+                  width="16"
+                  viewBox="0 0 24 24"
+                  color="neutral4"
+                  class="sc-16r8icm-0 lcZGgp"
+                >
+                  <path
+                    d="M12 2C6.48583 2 2 6.48583 2 12C2 17.5142 6.48583 22 12 22C17.5142 22 22 17.5142 22 12C22 6.48583 17.5142 2 12 2ZM14.215 17.2367C13.6642 17.4533 11.755 18.365 10.655 17.3958C10.3267 17.1075 10.1633 16.7417 10.1633 16.2975C10.1633 15.4658 10.4367 14.7408 10.9292 13C11.0158 12.6708 11.1217 12.2442 11.1217 11.9058C11.1217 11.3217 10.9 11.1667 10.2992 11.1667C10.0058 11.1667 9.68083 11.2708 9.38667 11.3808L9.54917 10.715C10.205 10.4483 11.0283 10.1233 11.7333 10.1233C12.7908 10.1233 13.5692 10.6508 13.5692 11.6542C13.5692 11.9433 13.5192 12.45 13.4142 12.8L12.8058 14.9517C12.68 15.3867 12.4525 16.3458 12.805 16.63C13.1517 16.9108 13.9725 16.7617 14.3775 16.5708L14.215 17.2367ZM13.21 8.66667C12.52 8.66667 11.96 8.10667 11.96 7.41667C11.96 6.72667 12.52 6.16667 13.21 6.16667C13.9 6.16667 14.46 6.72667 14.46 7.41667C14.46 8.10667 13.9 8.66667 13.21 8.66667Z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div class="statsItemRight___yJ5i-">
+              <div class="statsValue___2iaoZ">$850,020,625,466</div>
+              <span
+                style="
+                  color: var(--up-color);
+                  padding: 0;
+                  border-radius: 8px;
+                  display: block;
+                  margin-top: 0;
+                  font-size: 12px;
+                  font-weight: 600;
+                "
+                class="qe1dn9-0 RYkpI"
+                ><span class="icon-Caret-up"></span>1.48<!-- -->%</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="statsBlock___11SXA">
+          <div class="statsBlockInner___1abzU">
+            <div class="sc-16r8icm-0 lpaFj statsLabel___1Mkfd">
+              Volume<!-- -->
+              <div class="sc-16r8icm-0 biSIyJ namePill___3p_Ii">24h</div>
+              <div class="rqf1px-2 ctxRvG" aria-expanded="false">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  height="16"
+                  width="16"
+                  viewBox="0 0 24 24"
+                  color="neutral4"
+                  class="sc-16r8icm-0 lcZGgp"
+                >
+                  <path
+                    d="M12 2C6.48583 2 2 6.48583 2 12C2 17.5142 6.48583 22 12 22C17.5142 22 22 17.5142 22 12C22 6.48583 17.5142 2 12 2ZM14.215 17.2367C13.6642 17.4533 11.755 18.365 10.655 17.3958C10.3267 17.1075 10.1633 16.7417 10.1633 16.2975C10.1633 15.4658 10.4367 14.7408 10.9292 13C11.0158 12.6708 11.1217 12.2442 11.1217 11.9058C11.1217 11.3217 10.9 11.1667 10.2992 11.1667C10.0058 11.1667 9.68083 11.2708 9.38667 11.3808L9.54917 10.715C10.205 10.4483 11.0283 10.1233 11.7333 10.1233C12.7908 10.1233 13.5692 10.6508 13.5692 11.6542C13.5692 11.9433 13.5192 12.45 13.4142 12.8L12.8058 14.9517C12.68 15.3867 12.4525 16.3458 12.805 16.63C13.1517 16.9108 13.9725 16.7617 14.3775 16.5708L14.215 17.2367ZM13.21 8.66667C12.52 8.66667 11.96 8.10667 11.96 7.41667C11.96 6.72667 12.52 6.16667 13.21 6.16667C13.9 6.16667 14.46 6.72667 14.46 7.41667C14.46 8.10667 13.9 8.66667 13.21 8.66667Z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div class="statsItemRight___yJ5i-">
+              <div class="statsValue___2iaoZ">$71,402,245,782</div>
+              <span
+                style="
+                  color: var(--down-color);
+                  padding: 0;
+                  border-radius: 8px;
+                  display: block;
+                  margin-top: 0;
+                  font-size: 12px;
+                  font-weight: 600;
+                "
+                class="qe1dn9-0 RYkpI"
+                ><span class="icon-Caret-down"></span>44.44<!-- -->%</span
+              >
+            </div>
+          </div>
+          <div class="statsBlockInner___1abzU">
+            <div class="sc-16r8icm-0 lpaFj statsLabel___1Mkfd">
+              Volume / Market Cap<!-- -->
+            </div>
+            <div class="statsItemRight___yJ5i-">
+              <div class="statsValue___2iaoZ">0.0945</div>
+            </div>
+          </div>
+        </div>
+        <div class="statsSupplyBlock___ST_Wb">
+          <div class="sc-16r8icm-0 lpaFj statsLabel___1Mkfd">
+            Circulating Supply
+            <div class="rqf1px-2 ctxRvG" aria-expanded="false">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                height="16"
+                width="16"
+                viewBox="0 0 24 24"
+                color="neutral4"
+                class="sc-16r8icm-0 lcZGgp"
+              >
+                <path
+                  d="M12 2C6.48583 2 2 6.48583 2 12C2 17.5142 6.48583 22 12 22C17.5142 22 22 17.5142 22 12C22 6.48583 17.5142 2 12 2ZM14.215 17.2367C13.6642 17.4533 11.755 18.365 10.655 17.3958C10.3267 17.1075 10.1633 16.7417 10.1633 16.2975C10.1633 15.4658 10.4367 14.7408 10.9292 13C11.0158 12.6708 11.1217 12.2442 11.1217 11.9058C11.1217 11.3217 10.9 11.1667 10.2992 11.1667C10.0058 11.1667 9.68083 11.2708 9.38667 11.3808L9.54917 10.715C10.205 10.4483 11.0283 10.1233 11.7333 10.1233C12.7908 10.1233 13.5692 10.6508 13.5692 11.6542C13.5692 11.9433 13.5192 12.45 13.4142 12.8L12.8058 14.9517C12.68 15.3867 12.4525 16.3458 12.805 16.63C13.1517 16.9108 13.9725 16.7617 14.3775 16.5708L14.215 17.2367ZM13.21 8.66667C12.52 8.66667 11.96 8.10667 11.96 7.41667C11.96 6.72667 12.52 6.16667 13.21 6.16667C13.9 6.16667 14.46 6.72667 14.46 7.41667C14.46 8.10667 13.9 8.66667 13.21 8.66667Z"
+                ></path>
+              </svg>
+            </div>
+            <div class="rqf1px-2 fFvMWp" aria-expanded="false">
+              <div display="flex" class="sc-16r8icm-0 eskcnN">
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M11.6787 1.72497L8.8724 0.166748L6.06605 1.72497L2.97984 2.60752L2.09728 5.69374L0.539062 8.50008L2.09728 11.3064L2.97984 14.3926L6.06605 15.2752L8.8724 16.8334L11.6787 15.2752L14.765 14.3926L15.6475 11.3064L17.2057 8.50008L15.6475 5.69374L14.765 2.60752L11.6787 1.72497ZM12.9614 6.65501C13.3231 6.23766 13.278 5.6061 12.8607 5.24439C12.4433 4.88268 11.8117 4.9278 11.45 5.34515L7.8724 9.4732L6.29475 7.65284C5.93304 7.23549 5.30149 7.19038 4.88413 7.55208C4.46678 7.91379 4.42166 8.54535 4.78337 8.9627L7.11671 11.655C7.30665 11.8742 7.58238 12.0001 7.8724 12.0001C8.16241 12.0001 8.43814 11.8742 8.62809 11.655L12.9614 6.65501Z"
+                    fill="#3861FB"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div display="flex" class="sc-16r8icm-0 kkJvVq">
+            <div class="statsValue___2iaoZ">18,713,700.00 BTC</div>
+            <div class="supplyBlockPercentage___1g1SF">89%</div>
+          </div>
+          <div class="sc-16r8icm-0 bCXeVR">
+            <span style="width: 100%" class="sc-1hm9f3g-0 dmzjSD"
+              ><span style="width: 89.11285714285714%"></span
+            ></span>
+          </div>
+          <div
+            style="margin-top: 32px"
+            display="flex"
+            class="sc-16r8icm-0 jpYoIk"
+          >
+            <div class="statsLabel___1Mkfd">
+              Max Supply
+              <div class="rqf1px-2 ctxRvG" aria-expanded="false">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  height="16"
+                  width="16"
+                  viewBox="0 0 24 24"
+                  color="neutral4"
+                  class="sc-16r8icm-0 lcZGgp"
+                >
+                  <path
+                    d="M12 2C6.48583 2 2 6.48583 2 12C2 17.5142 6.48583 22 12 22C17.5142 22 22 17.5142 22 12C22 6.48583 17.5142 2 12 2ZM14.215 17.2367C13.6642 17.4533 11.755 18.365 10.655 17.3958C10.3267 17.1075 10.1633 16.7417 10.1633 16.2975C10.1633 15.4658 10.4367 14.7408 10.9292 13C11.0158 12.6708 11.1217 12.2442 11.1217 11.9058C11.1217 11.3217 10.9 11.1667 10.2992 11.1667C10.0058 11.1667 9.68083 11.2708 9.38667 11.3808L9.54917 10.715C10.205 10.4483 11.0283 10.1233 11.7333 10.1233C12.7908 10.1233 13.5692 10.6508 13.5692 11.6542C13.5692 11.9433 13.5192 12.45 13.4142 12.8L12.8058 14.9517C12.68 15.3867 12.4525 16.3458 12.805 16.63C13.1517 16.9108 13.9725 16.7617 14.3775 16.5708L14.215 17.2367ZM13.21 8.66667C12.52 8.66667 11.96 8.10667 11.96 7.41667C11.96 6.72667 12.52 6.16667 13.21 6.16667C13.9 6.16667 14.46 6.72667 14.46 7.41667C14.46 8.10667 13.9 8.66667 13.21 8.66667Z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div class="maxSupplyValue___1nBaS">21,000,000</div>
+          </div>
+          <div display="flex" class="sc-16r8icm-0 kVHavZ">
+            <div class="statsLabel___1Mkfd">
+              Total Supply
+              <div class="rqf1px-2 ctxRvG" aria-expanded="false">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  height="16"
+                  width="16"
+                  viewBox="0 0 24 24"
+                  color="neutral4"
+                  class="sc-16r8icm-0 lcZGgp"
+                >
+                  <path
+                    d="M12 2C6.48583 2 2 6.48583 2 12C2 17.5142 6.48583 22 12 22C17.5142 22 22 17.5142 22 12C22 6.48583 17.5142 2 12 2ZM14.215 17.2367C13.6642 17.4533 11.755 18.365 10.655 17.3958C10.3267 17.1075 10.1633 16.7417 10.1633 16.2975C10.1633 15.4658 10.4367 14.7408 10.9292 13C11.0158 12.6708 11.1217 12.2442 11.1217 11.9058C11.1217 11.3217 10.9 11.1667 10.2992 11.1667C10.0058 11.1667 9.68083 11.2708 9.38667 11.3808L9.54917 10.715C10.205 10.4483 11.0283 10.1233 11.7333 10.1233C12.7908 10.1233 13.5692 10.6508 13.5692 11.6542C13.5692 11.9433 13.5192 12.45 13.4142 12.8L12.8058 14.9517C12.68 15.3867 12.4525 16.3458 12.805 16.63C13.1517 16.9108 13.9725 16.7617 14.3775 16.5708L14.215 17.2367ZM13.21 8.66667C12.52 8.66667 11.96 8.10667 11.96 7.41667C11.96 6.72667 12.52 6.16667 13.21 6.16667C13.9 6.16667 14.46 6.72667 14.46 7.41667C14.46 8.10667 13.9 8.66667 13.21 8.66667Z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div class="maxSupplyValue___1nBaS">18,713,700</div>
+          </div>
+        </div>
+      </div>
+      <div class="displayMobile___5p3S9">
+        <button class="x0o17e-0 dDXPcp">More stats</button>
+      </div>
+    </div>
+    <div class="sc-16r8icm-0 dOJIkS buyAdButtonSection___1BCTy">
+      <div class="container___2a2j9">
+        <div class="sc-16r8icm-0 jrJYes buttonRow___KtvAQ" display="flex">
+          <button class="buyButton___3y6jf">
+            Buy<svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              height="14px"
+              width="14px"
+              viewBox="0 0 24 24"
+              class="sc-16r8icm-0 vfCEa"
+            >
+              <path
+                d="M18.0566 8H5.94336C5.10459 8 4.68455 9.02183 5.27763 9.61943L11.3343 15.7222C11.7019 16.0926 12.2981 16.0926 12.6657 15.7222L18.7223 9.61943C19.3155 9.02183 18.8954 8 18.0566 8Z"
+              ></path>
+            </svg></button
+          ><button class="buyButton___3y6jf">
+            Exchange<svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              height="14px"
+              width="14px"
+              viewBox="0 0 24 24"
+              class="sc-16r8icm-0 vfCEa"
+            >
+              <path
+                d="M18.0566 8H5.94336C5.10459 8 4.68455 9.02183 5.27763 9.61943L11.3343 15.7222C11.7019 16.0926 12.2981 16.0926 12.6657 15.7222L18.7223 9.61943C19.3155 9.02183 18.8954 8 18.0566 8Z"
+              ></path>
+            </svg></button
+          ><button class="buyButton___3y6jf">
+            Gaming<svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              height="14px"
+              width="14px"
+              viewBox="0 0 24 24"
+              class="sc-16r8icm-0 vfCEa"
+            >
+              <path
+                d="M18.0566 8H5.94336C5.10459 8 4.68455 9.02183 5.27763 9.61943L11.3343 15.7222C11.7019 16.0926 12.2981 16.0926 12.6657 15.7222L18.7223 9.61943C19.3155 9.02183 18.8954 8 18.0566 8Z"
+              ></path>
+            </svg></button
+          ><button class="buyButton___3y6jf">
+            Earn Crypto<svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              height="14px"
+              width="14px"
+              viewBox="0 0 24 24"
+              class="sc-16r8icm-0 vfCEa"
+            >
+              <path
+                d="M18.0566 8H5.94336C5.10459 8 4.68455 9.02183 5.27763 9.61943L11.3343 15.7222C11.7019 16.0926 12.2981 16.0926 12.6657 15.7222L18.7223 9.61943C19.3155 9.02183 18.8954 8 18.0566 8Z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div
+          class="sc-16r8icm-0 dOJIkS sponsored___3yiAs sponsoredMark___eHALo"
+        >
+          <svg
+            width="16px"
+            height="16px"
+            xmlns="http://www.w3.org/2000/svg"
+            class="ximw1v-0 iNDrzW cmc-svg-logo"
+          >
+            <path
+              d="M11.304 7.768c-.23.144-.501.161-.707.047-.262-.146-.406-.486-.406-.96V5.435c0-.685-.274-1.172-.734-1.304-.779-.223-1.365.716-1.585 1.068L6.5 7.394V4.713c-.016-.617-.22-.986-.605-1.098-.256-.073-.638-.044-1.01.516L1.807 9A5.285 5.285 0 0 1 1.181 6.5 5.324 5.324 0 0 1 6.5 1.182 5.324 5.324 0 0 1 11.816 6.5l.001.014v.015c.027.568-.16 1.02-.513 1.24zM12.997 6.5V6.471A6.507 6.507 0 0 0 6.498 0 6.507 6.507 0 0 0 0 6.5C0 10.084 2.915 13 6.499 13a6.477 6.477 0 0 0 4.418-1.733.59.59 0 1 0-.803-.867 5.298 5.298 0 0 1-3.615 1.418 5.304 5.304 0 0 1-3.957-1.77l2.775-4.39v2.024c0 .972.383 1.286.704 1.378.321.092.812.03 1.327-.795l1.526-2.438c.05-.079.094-.147.136-.205v1.232c0 .91.37 1.636 1.013 1.994.58.323 1.31.294 1.905-.076.721-.449 1.11-1.275 1.07-2.272z"
+              fill="#7e899f"
+              fill-rule="evenodd"
+            ></path>
+          </svg>
+          <div>Sponsored</div>
+        </div>
+      </div>
+    </div>
+    <div class="sc-16r8icm-0 eYbOqj linksSection___2uV91">
+      <div class="sc-16r8icm-0 cFFQbZ container___2dCiP">
+        <div class="heading___1qDgY hideOnDesktop___1Mbjk">Links</div>
+        <div class="mobileContent___IGuVW">
+          <div class="text___26Mz_">Website, Explorers, Socials etc.</div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            height="20px"
+            width="20px"
+            viewBox="0 0 24 24"
+            class="sc-16r8icm-0 eFAIqT modalTriggerMobile___2OWSb"
+          >
+            <path
+              d="M9 6L15 12L9 18"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-miterlimit="10"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+        </div>
+        <ul class="content___MhX1h">
+          <li>
+            <a
+              class="button___2MvNi"
+              rel="nofollow noopener"
+              href="https://bitcoin.org/"
+              target="_blank"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                height="16px"
+                width="16px"
+                viewBox="0 0 24 24"
+                class="sc-16r8icm-0 qDvsv"
+              >
+                <path
+                  d="M11.877 15.9787C11.8146 16.8242 11.4524 17.6196 10.8555 18.2217L9.94675 19.1305C9.27191 19.7958 8.36141 20.1672 7.41381 20.1638C6.46621 20.1604 5.5584 19.7825 4.88834 19.1124C4.21828 18.4423 3.84034 17.5345 3.83695 16.5868C3.83355 15.6392 4.20497 14.7287 4.87021 14.0538L5.779 13.145C6.38116 12.5483 7.1765 12.186 8.02192 12.1235L9.67229 10.4731C8.76285 10.2319 7.80611 10.2331 6.89728 10.4766C5.98845 10.72 5.15923 11.1973 4.49215 11.8608L3.58335 12.7697C2.56946 13.7837 1.99991 15.159 2 16.5929C2.00009 18.0269 2.5698 19.4021 3.5838 20.416C4.59781 21.43 5.97305 21.9995 7.40698 21.9994C8.84092 21.9994 10.2161 21.4296 11.23 20.4156L12.1388 19.5068C12.802 18.8395 13.279 18.0102 13.5225 17.1014C13.7659 16.1926 13.7673 15.236 13.5265 14.3265L11.877 15.9787Z"
+                ></path>
+                <path
+                  d="M15.9793 11.8768C16.8248 11.8144 17.6202 11.4522 18.2222 10.8553L19.131 9.9465C19.7963 9.27163 20.1677 8.3611 20.1643 7.41348C20.1609 6.46585 19.783 5.55801 19.1129 4.88793C18.4429 4.21786 17.535 3.83991 16.5874 3.83651C15.6398 3.83312 14.7293 4.20455 14.0545 4.8698L13.1457 5.77863C12.549 6.3808 12.1868 7.17616 12.1242 8.02161L10.4738 9.67203C10.2327 8.76256 10.2339 7.80579 10.4773 6.89693C10.7208 5.98807 11.198 5.15883 11.8616 4.49173L12.7704 3.58291C13.7844 2.56899 15.1596 1.99943 16.5935 1.99951C18.0275 1.9996 19.4027 2.56932 20.4165 3.58336C21.4304 4.5974 22 5.97267 21.9999 7.40665C21.9998 8.84063 21.4301 10.2158 20.4161 11.2298L19.5073 12.1386C18.84 12.8018 18.0108 13.2789 17.102 13.5223C16.1932 13.7658 15.2366 13.7672 14.3271 13.5264L15.9793 11.8768Z"
+                ></path>
+                <path
+                  d="M8.36434 16.5441C8.18462 16.5441 8.00895 16.4907 7.85954 16.3909C7.71012 16.291 7.59367 16.1491 7.5249 15.983C7.45613 15.817 7.43814 15.6343 7.47319 15.458C7.50824 15.2817 7.59476 15.1198 7.72182 14.9927L14.9922 7.72213C15.1636 7.55658 15.3932 7.46498 15.6315 7.46705C15.8697 7.46912 16.0977 7.5647 16.2662 7.7332C16.4347 7.9017 16.5302 8.12965 16.5323 8.36794C16.5344 8.60623 16.4428 8.8358 16.2772 9.00721L9.00686 16.2778C8.83646 16.4483 8.60535 16.544 8.36434 16.5441Z"
+                ></path>
+              </svg>
+              <div class="buttonName___3G9lW">bitcoin.org</div>
+              <div
+                class="externalLinkIcon___2oO2O projectLink__externalLinkIcon"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  height="16px"
+                  width="16px"
+                  viewBox="0 0 24 24"
+                  class="sc-16r8icm-0 qDvsv"
+                >
+                  <path
+                    d="M12 11.9998L20 4M20 4H14.1817M20 4L19.9999 9.81802M9.81819 6.90946H5.77777C4.79594 6.90946 4 7.70537 4 8.68718V18.2223C4 19.2041 4.79594 20 5.77778 20H15.3131C16.295 20 17.0909 19.2041 17.0909 18.2223V14.182"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg></div
+            ></a>
+          </li>
+          <li>
+            <button class="button___2MvNi" aria-expanded="false">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                height="16px"
+                width="16px"
+                viewBox="0 0 24 24"
+                class="sc-16r8icm-0 qDvsv"
+              >
+                <path
+                  d="M16.4153 16.4153L20 20M18.5455 11.2727C18.5455 15.2893 15.2894 18.5454 11.2728 18.5454C7.25612 18.5454 4 15.2893 4 11.2727C4 7.2561 7.25612 4 11.2728 4C15.2894 4 18.5455 7.2561 18.5455 11.2727Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+              <div class="buttonName___3G9lW">Explorers</div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                height="16px"
+                width="16px"
+                viewBox="0 0 24 24"
+                class="sc-16r8icm-0 qDvsv"
+              >
+                <path
+                  d="M6 9L12 15L18 9"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </button>
+          </li>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}

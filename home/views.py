@@ -11,6 +11,9 @@ test_curr=['bitcoin']
 
 #API Url
 api_url = "https://api.coincap.io/v2/assets/"
+#https://api.coincap.io/v2/assets/v2/candles?exchange=poloniex&interval=h8&baseId=ethereum&quoteId=bitcoin
+
+#https://api.coincap.io/v2/assets/v2/candles?&interval=d1&baseId=ethereum&quoteId=bitcoin
 
 def home(request):
     data = get_crypto_data()
@@ -62,4 +65,4 @@ def dashboard(request,currency):
     except Exception as e:
         data={"error":f"exception occured in get_crypto_data {e}"}
         print(e)
-    return render(request, "dashboard.html", {'data':data,'profile':currency,'error':e})
+    return render(request, "dashboard.html", {'data':data["data"],'profile':currency,'error':e})
