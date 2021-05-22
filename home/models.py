@@ -20,6 +20,7 @@ class Api_data(models.Model):
 
 class Crypto_data(models.Model):
     _id = models.ObjectIdField()
+    Name = models.CharField(max_length=50)
     Date = models.DateTimeField()
     Close = models.DecimalField(decimal_places=4,max_digits=20)
     High = models.DecimalField(decimal_places=4,max_digits=20)
