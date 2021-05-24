@@ -1,4 +1,5 @@
 
+from django.db.models import query
 import requests, datetime
 
 from django.http import HttpResponse
@@ -6,7 +7,8 @@ from django.shortcuts import render, redirect
 from django.core.mail import send_mail, BadHeaderError
 from .models import Api_data, Crypto_data
 from .forms import ContactForm
-from datetime import date, timedelta
+import datetime
+from datetime import date, timedelta, timezone
 from datetime import datetime as dt
 
 def yesterday():
@@ -83,3 +85,35 @@ def dashboard(request,currency):
         print(f'query except triggered for {f}')
         query = None
     return render(request, "dashboard.html", {'data':data["data"],'query':query,'profile':currency,'error':e,'changePercent24Hr':changePercent24Hr})
+
+def check_updates(request):
+    for currency in all_curr:
+        give_query(currency)
+
+    return render(request,'test.html')
+
+def give_query(currency,delta =0):
+    day = iso_date(delta)
+    try:
+        query = Crypto_data.objects.filter(Name = str(currency),Date = day)
+        if not query.exists():
+            raise ValueError ('Query Not found')
+        print('data found')
+    except Exception as f:
+        print(f'query except triggered for {f}')
+        query = None
+    print(f' Query:{query}')
+    return query
+
+def iso_date(delta=0):
+    return (dt.now(timezone.utc)-timedelta(days=delta)).replace(hour=0, minute=0, second=0, microsecond=0).isoformat()
+
+def simp_date(delta =0):
+    datetime_obj = dt.today() - timedelta(days= delta)
+    return dt.strftime(datetime_obj,'%b %d %Y')
+
+def check_data(currency):
+    query = give_query
+    while query == None:
+        
+    
