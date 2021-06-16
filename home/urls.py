@@ -8,5 +8,5 @@ urlpatterns = [
     path("contact",views.contact, name ='contact'),
     path('about',views.about, name = 'about'),
     path("currency/<currency>",views.dashboard),
- path('test',views.check_updates, name = 'test'),
+ path('update-data',views.check_updates, name = 'test'),
 ]

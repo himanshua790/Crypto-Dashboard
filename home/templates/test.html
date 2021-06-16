@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-
+{% for op in query  %}
+<h3>{{op }}</h3>
+{% endfor %}
 {% endblock content %}
