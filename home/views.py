@@ -115,25 +115,25 @@ def dashboard(request, currency):
 
 
 def check_updates(request):
-    operation_logs=[]
+    operation_logs = []
     for currency in all_curr:
         #query = give_query(currency)
 
         dates = dates_to_update(currency)
-        if len(dates) >=1: 
+        if len(dates) >= 1:
             final_data = extract_date(Curr_urls[currency], dates)
 
             print(f'Data Updated on {currency}\n\n', final_data)
             try:
                 list_to_model_update(Crypto_data, final_data, currency)
-                query = f'Data Updated! {currency} \n'
+                query = f'{currency} Updated!  \n'
             except Exception as e:
-                print(f'Unable to update data for {currency} \n',e)
-                query = f'Unable to update data for {currency} \n' +e
+                print(f'Unable to update data for {currency} \n', e)
+                query = f'Unable to update data for {currency} \n' + e
 
         else:
-            print('Data is already up to date')
-            query = 'Data is already up to date!'
+            print(f'{currency} is already up to date')
+            query = f'{currency} is already up to date!'
 
         operation_logs.append(query)
     return render(request, 'test.html', {'query': operation_logs})
@@ -167,13 +167,16 @@ def dates_to_update(currency):
         Name=str(currency)).order_by('-Date').values()[0]['Date']
     date_diff = ((dt.now(timezone.utc)).replace(
         hour=0, minute=0, second=0, microsecond=0) - last_date).days
+    print("date_diff:", date_diff)
     dates = []
-    if date_diff ==1:
-        return []
     for i in range(1, date_diff+1):
         dates.append(simp_date(i))
-    # print('date_to_update',dates)
-    return dates
+    print('date_to_update', dates)
+    return dates[:-1]
+
+
+def date_to_iso_date(date):
+    return dt.strptime(date, '%b %d %Y').replace(hour=0, minute=0, second=0, microsecond=0).replace(tzinfo=datetime.timezone.utc).isoformat()
 
 
 def list_to_model_update(model, data_list, name):
@@ -187,6 +190,5 @@ def list_to_model_update(model, data_list, name):
             Open=obj['Open'],
             Volume=obj['Volume']
         )
-    #print(f'Updated data to {name}')
-def date_to_iso_date(date):
-    return dt.strptime(date, '%b %d %Y').replace(hour=0, minute=0, second=0, microsecond=0).isoformat()
+
+    print(f'Updated data to {name}')
